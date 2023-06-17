@@ -1,0 +1,220 @@
+/* ---start--- */
+/* "A Modern CSS Reset" by Andy Bell
+ https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---end--- */
+
+/* -- style -- */
+
+:root {
+    --clr-soft-blue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+
+    --clr-main-bg: hsl(217, 54%, 11%);
+    --clr-card-bg: hsl(216, 50%, 16%);
+    --clr-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-outfit: 'Outfit', sans-serif;
+    --fw-light: 300;
+    --fw-mid: 400;
+    --fw-bold: 600;
+}
+
+/* -- general -- */
+.container {
+    font-family: var(--ff-outfit);
+    height: 100dvh;
+    background-color: var(--clr-main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 316px;
+    height: 540px;
+    background-color: var(--clr-card-bg);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.image {
+    position: relative;
+    width: 276px;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(178, 100%, 50%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+
+.nft-name {
+    color: var(--clr-white);
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+}
+
+.nft-name:hover, .creator-group>p>span:hover {
+    color: var(--clr-cyan);
+}
+
+.nft-description {
+    color: var(--clr-soft-blue);
+}
+
+.nft-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-group,
+.time-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.icon {
+    height: 16px;
+    margin: 6px;
+}
+
+.price {
+    color: var(--clr-cyan);
+    
+}
+
+.time-left {
+    color: var(--clr-soft-blue);
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    background-color: var(--clr-line);
+}
+
+.creator-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.creator-img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.creator-group>p {
+    color: var(--clr-soft-blue);
+    font-size: 14px;
+}
+
+.creator-group>p>span {
+    color: var(--clr-white);
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
