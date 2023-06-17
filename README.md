@@ -4,6 +4,7 @@
 
 ### Screenshot
 
+![image](https://github.com/climb512/nft-preview-card-component-main/assets/19371146/f6355576-2193-4ab7-938b-5397ebf97e70)
 
 
 ### Built with
